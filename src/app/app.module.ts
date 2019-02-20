@@ -6,20 +6,40 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { HttpClientModule } from '@angular/common/http';
+import { InfoPage } from '../pages/info/info';
+import { LaptobPage } from '../pages/laptob/laptob';
+import { LapinfoPage } from '../pages/lapinfo/lapinfo';
+import { VideogamesPage } from '../pages/videogames/videogames';
+import { VginfoPage } from '../pages/vginfo/vginfo';
+import { BuscarPage } from '../pages/buscar/buscar';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    InfoPage,
+    LaptobPage,
+    LapinfoPage,
+    VideogamesPage,
+    VginfoPage,
+    BuscarPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    InfoPage,
+    LaptobPage,
+    LapinfoPage,
+    VideogamesPage,
+    VginfoPage,
+    BuscarPage
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,29 @@
+<!--
+  Generated template for the BuscarPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Buscar</ion-title>
+  </ion-navbar>
+  <ion-searchbar (ionInput)= "getItems ($event)"></ion-searchbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor = "let p of elementos"></ion-item>
+    <ion-thumbnail item-start>
+      <img *ngIf = "p.ad.hasOwnProperty('thumbnail')"
+      src= "https://img.segundamano.mx/cover/{{p.ad.thumbnail.path}}">
+    </ion-thumbnail>
+    <h2 *ngIf = "p.ad.hasOwnProperty('subject')">
+      {{p.ad.subject}}
+    </h2>
+    <h2 *ngIf = "p.ad.hasOwnProperty('list_price')">
+      {{p.ad.list_price.label}}
+    </h2>
+    <button ion-button clear item-end (click)= "info(p)">Ver</button>
+  </ion-list>
+</ion-content>
